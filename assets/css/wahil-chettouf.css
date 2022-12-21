@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+:root {
+    --color-blue: #0078FF;
+    --bg-primary: #040404;
+    --bg-secondary: #F5F5F5;
+
+    /* --- font --- */
+    --font-primary: 15px;
+    --weight-primary: 700;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: Roboto
+}
+
+.flex-r {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+.page {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+}
+
+/* --- Header Style --- */
+#header {
+    position: fixed;
+    top: 0;
+    background-color: var(--bg-primary);
+    color: white;
+    width: 100%;
+    height: 84px;
+    justify-content: center !important;
+    padding: 0 70px;
+    opacity: 95%;
+    z-index: 99;
+}
+
+header .container {
+    width: 1140px;
+    height: 44px;
+    position: relative;
+    background-color: var(--bg-primary);
+}
+
+header .container h2 {
+    font-size: 1.7em;
+}
+
+/* --- Menu Burger --- */
+header .container .nav-phone {
+    display: none;
+}
+
+header .container .nav-phone .bars {
+    width: 20px;
+    height: 18px;
+    position: relative;
+}
+
+header .container .nav-phone .bars:hover::after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: -50px;
+    width: 80px;
+    height: 50px;
+}
+
+header .container .nav-phone .bars .bar {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+header .container .nav-phone .menu-burger {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-primary);
+    width: 40%;
+    right: 0;
+    top: 134%;
+    opacity: .9;
+}
+
+header .container .nav-phone .menu-burger ul {
+    align-items: flex-start;
+    width: 100%;
+}
+
+header .container .nav-phone .menu-burger li {
+    width: 100%;
+}
+
+header .container .nav-phone .menu-burger a {
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    font-weight: var(--weight-primary);
+    font-size: var(--font-primary);
+    position: relative;
+    padding: 10px 15px;
+}
+
+header .container .nav-phone .menu-burger a:hover {
+    color: var(--color-blue)
+}
+
+
+
+/* --- menu --- */
+header .container .menu li {
+    padding: 10px 15px;
+}
+
+header .container .menu a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: var(--weight-primary);
+    padding: 10px 0;
+    font-size: var(--font-primary);
+    position: relative;
+}
+
+header .container .menu a::after {
+    content: '';
+    position: absolute;
+    background: rgb(255, 255, 255);
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+header .container .menu li:hover a::after {
+    width: 80%;
+}
+
+/* ---------- Hero Back Ground ----------- */
+.hero {
+    position: relative;
+    background: var(--bg-primary);
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/hero-bg.jpg");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: space-evenly;
+}
+
+.hero .container {
+    max-width: 1200px;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    padding: 0 10px;
+    justify-content: flex-start;
+    row-gap: 30px;
+    justify-content: center;
+    color: white;
+
+}
+
+.hero .container h1 {
+    font-size: 3.2em;
+    font-weight: var(--weight-primary);
+    letter-spacing: 1.5px;
+}
+
+.hero .container span {
+    font-size: 2em;
+    font-weight: var(--weight-primary);
+}
+
+
+
+/* ------ Section About Me ------- */
+.main {
+    
+}
+
+.about {
+    background: var(--bg-secondary);
+    justify-content: center;
+    padding: 70px;
+}
+
+.about .container {
+    width: 1140px;
+    background-color: rgb(255, 255, 255);
+    padding: 60px;
+    box-shadow: 1px 1px 10px 1px rgb(170, 168, 168);
+    align-items: flex-start;
+    row-gap: 50px;
+}
+
+.about .container .col-about-0 {
+    width: 498px;
+}
+/* -- info -- */
+.about .container .col-about-0 .info {
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.about .container .col-about-0 .info .cadre-img {
+    width: 150px;
+    height: 150px;
+}
+
+.about .container .col-about-0 .info .cadre-img img {
+    width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.about .container .col-about-0 .info .about-info {
+    gap: 20px;
+    width: 280px;
+    align-items: flex-start;
+}
+
+.about .container .col-about-0 .info .about-info .title-info {
+    font-weight: var(--weight-primary);
+    text-transform: capitalize;
+}
+
+/* -- skills -- */
+.about .container .col-about-0 .skills {
+    margin-top: 40px;
+}
+
+.about .container .col-about-0 .skills h4 {
+    margin-bottom: 20px;
+}
+
+.about .container .col-about-0 .skills .title-s {
+    text-transform: uppercase;
+}
+
+.about .container .col-about-0 .skills .progress {
+    width: 100%;
+    height: 12px;
+    background: #CDE1F8;
+    margin: 10px 0 20px;
+}
+
+.about .container .col-about-0 .skills .progress .progree-bar {
+    height: 100%;
+    background: var(--color-blue);
+}
+
+
+/* ---- about-2 ---- */
+.about .container .col-about-1 {
+    width: 498px;
+    padding: 0 10px;
+}
+
+.about .container .col-about-1 h3 {
+    position: relative;
+    font-size: 1.8em;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.about .container .col-about-1 h3::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 90px;
+    height: 4px;
+    background-color: var(--color-blue);
+}
+
+.about .container .col-about-1 .lead {
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
